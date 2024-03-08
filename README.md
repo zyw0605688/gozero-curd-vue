@@ -40,3 +40,4 @@ curl --location --request POST 'http://localhost:8888/curd' \
 ### 视频教程
 后续补上，only_gen_api参数还未生效，后面有空再补充
 如果有兴趣参与的小伙伴，也欢迎pr
+走过路过的帮忙点个star，谢谢
