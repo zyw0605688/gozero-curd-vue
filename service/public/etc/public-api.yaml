@@ -1,0 +1,5 @@
+Name: public-api
+Host: 0.0.0.0
+Port: 8888
+
+PublicDb: "root:zmjos@tcp(172.16.66.26:3306)/PublicDb?charset=utf8mb4&parseTime=True&loc=Local"

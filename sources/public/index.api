@@ -1,0 +1,31 @@
+syntax = "v1"
+
+info (
+	title:   "public api文件"
+	desc:    "public-api服务"
+	author:  "xxx"
+	version: "v1"
+)
+
+type (
+	Empty  {}
+	HelloWorldResponse {
+		Data string `json:"data"`
+	}
+	CurdCreateRequest {
+		ModelName  string `json:"model_name"`
+		OnlyGenApi bool   `json:"only_gen_api"`
+	}
+)
+
+@server (
+	group: curd
+)
+service public-api {
+	@handler HelloWorld
+	get / (Empty) returns (HelloWorldResponse)
+
+	@handler CurdCreate
+	post /curd (CurdCreateRequest) returns (Empty)
+}
+
