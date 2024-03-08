@@ -5,7 +5,7 @@ gozero根据数据库模型，生成curd代码，生成vue增删改查页面
 1. 下载本项目，安装依赖
 2. 编辑config.yaml文件，配置数据库连接信息，运行
 3. 正常访问根路径即可看到hello world
-4. post请求，生成代码
+4. post请求，生成代码（前提是你的go环境，goctl环境都已经好了）
 ```
 curl --location --request POST 'http://localhost:8888/curd' \
 --header 'Content-Type: application/json' \
