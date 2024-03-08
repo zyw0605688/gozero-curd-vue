@@ -1,9 +1,9 @@
 # gozero-curd-vue
-gozero根据数据库模型，生成curd代码，生成vue增删改查页面
+一个低代码接口，只需定义model，即可自动生成增、删、改、详情、列表5个接口，生成vue增删改查页面
 
 ### 使用流程
-1. 下载本项目，安装依赖
-2. 编辑config.yaml文件，配置数据库连接信息，运行
+1. 下载本项目，安装依赖 go mod tidy
+2. 编辑config.yaml文件，配置数据库连接信息，进入public目录运行 go run public.go
 3. 正常访问根路径即可看到hello world
 4. post请求，生成代码（前提是你的go环境，goctl环境都已经好了）
 ```
@@ -17,8 +17,6 @@ curl --location --request POST 'http://localhost:8888/curd' \
 5. 删掉logic多余代码，将前端文件复制到项目里，重启即可使用
 6. 后续要开发自己的curd，请先定义model，加入db，然后请求以上接口即可生成代码
 
-### Curd是什么
-一个低代码接口，只需定义model，即可自动生成增、删、改、详情、列表5个接口
 
 ### 工作流程
 1. 反射model结构体，提取字段，根据字段及规则拼装字符串，生成.api文件
@@ -36,11 +34,12 @@ curl --location --request POST 'http://localhost:8888/curd' \
 
 ### 项目用到的第三方包，请提前安装
 1. "gorm.io/gorm" 都知道
-2. "github.com/jinzhu/copier" 用来拷贝参数
+2. "github.com/jinzhu/copier" 用来拷贝参数，这个特别注意。
 3. "github.com/go-cmd/cmd" 用来兼容执行shell命令
 
 ### 视频教程
-* 后续补上，only_gen_api参数还未生效，后面有空再补充
+* https://www.bilibili.com/video/BV14m411d7mz/
+* only_gen_api参数还未生效，后面有空再补充
 * 如果有兴趣参与的小伙伴，也欢迎pr
 * 走过路过的帮忙点个star，谢谢
-* 里面很多思想借鉴了gin-vue-admin，包括生成的前端vue文件，向gva致敬
+* 里面思想借鉴了gin-vue-admin，包括生成的前端vue文件，向gva致敬
