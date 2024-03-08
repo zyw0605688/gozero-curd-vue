@@ -40,6 +40,7 @@ curl --location --request POST 'http://localhost:8888/curd' \
 3. "github.com/go-cmd/cmd" 用来兼容执行shell命令
 
 ### 视频教程
-后续补上，only_gen_api参数还未生效，后面有空再补充
-如果有兴趣参与的小伙伴，也欢迎pr
-走过路过的帮忙点个star，谢谢
+* 后续补上，only_gen_api参数还未生效，后面有空再补充
+* 如果有兴趣参与的小伙伴，也欢迎pr
+* 走过路过的帮忙点个star，谢谢
+* 里面很多思想借鉴了gin-vue-admin，包括生成的前端vue文件，向gva致敬
