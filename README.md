@@ -14,6 +14,8 @@ curl --location --request POST 'http://localhost:8888/curd' \
     "only_gen_api": true
 }'
 ```
+5. 删掉logic多余代码，将前端文件复制到项目里，重启即可使用
+6. 后续要开发自己的curd，请先定义model，加入db，然后请求以上接口即可生成代码
 
 ### Curd是什么
 一个低代码接口，只需定义model，即可自动生成增、删、改、详情、列表5个接口
